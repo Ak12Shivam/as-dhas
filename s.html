@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25-Day AI/ML Mastery Workshop | Transform Your Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, #667eea 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, #764ba2 2px, transparent 2px);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid #667eea;
+            white-space: nowrap;
+            animation: typing 3s steps(40), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #667eea; }
+        }
+        
+        .phase-card {
+            transition: all 0.3s ease;
+        }
+        
+        .phase-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen gradient-bg hero-pattern flex items-center justify-center">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 floating">
+            <div class="w-20 h-20 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
+                <span class="text-2xl">🤖</span>
+            </div>
+        </div>
+        <div class="absolute top-40 right-20 floating" style="animation-delay: -1s;">
+            <div class="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
+                <span class="text-xl">📊</span>
+            </div>
+        </div>
+        <div class="absolute bottom-40 left-20 floating" style="animation-delay: -2s;">
+            <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
+                <span class="text-2xl">🚀</span>
+            </div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-6xl mx-auto px-6">
+            <div class="mb-8">
+                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+                    <span class="block typewriter">AI/ML MASTERY</span>
+                    <span class="text-yellow-400 block mt-4">IN 25 DAYS</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-light mb-8 text-gray-200">
+                    From Zero to AI Hero: Build Real Projects, Deploy Smart Apps & Create Intelligent Chatbots
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+                <button onclick="scrollToRegistration()" class="pulse-animation bg-yellow-400 text-gray-900 px-12 py-4 rounded-full text-xl font-bold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    🎯 REGISTER NOW
+                </button>
+                <button onclick="scrollToProgram()" class="glass-card px-12 py-4 rounded-full text-xl font-semibold hover:bg-white hover:bg-opacity-20 transition-all duration-300">
+                    📚 View Curriculum
+                </button>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-yellow-400">25</div>
+                    <div class="text-sm text-gray-300">Days</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-yellow-400">7</div>
+                    <div class="text-sm text-gray-300">Projects</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-yellow-400">5</div>
+                    <div class="text-sm text-gray-300">Phases</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-yellow-400">100%</div>
+                    <div class="text-sm text-gray-300">Practical</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section id="program" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                    🎓 Program Structure
+                </h2>
+                <p class="text-xl text-gray-300">5 Comprehensive Phases Taking You From Beginner to AI Expert</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Phase 1 -->
+                <div class="phase-card bg-gradient-to-br from-blue-600 to-blue-800 p-8 rounded-3xl">
+                    <div class="text-4xl mb-4">🔰</div>
+                    <h3 class="text-2xl font-bold mb-4">Phase 1: AI/ML Foundations</h3>
+                    <p class="text-blue-100 mb-4">Days 1-5</p>
+                    <ul class="text-sm text-blue-100 space-y-2">
+                        <li>• What is AI & Machine Learning?</li>
+                        <li>• Types of ML (Supervised, Unsupervised, Reinforcement)</li>
+                        <li>• ML Project Components</li>
+                        <li>• Model Evaluation Basics</li>
+                    </ul>
+                </div>
+                
+                <!-- Phase 2 -->
+                <div class="phase-card bg-gradient-to-br from-green-600 to-green-800 p-8 rounded-3xl">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-2xl font-bold mb-4">Phase 2: Python for ML</h3>
+                    <p class="text-green-100 mb-4">Days 7-10</p>
+                    <ul class="text-sm text-green-100 space-y-2">
+                        <li>• NumPy & Pandas Mastery</li>
+                        <li>• Data Cleaning & EDA</li>
+                        <li>• Data Visualization</li>
+                        <li>• Scikit-learn Fundamentals</li>
+                    </ul>
+                </div>
+                
+                <!-- Phase 3 -->
+                <div class="phase-card bg-gradient-to-br from-purple-600 to-purple-800 p-8 rounded-3xl">
+                    <div class="text-4xl mb-4">✅</div>
+                    <h3 class="text-2xl font-bold mb-4">Phase 3: Core Algorithms</h3>
+                    <p class="text-purple-100 mb-4">Days 11-14</p>
+                    <ul class="text-sm text-purple-100 space-y-2">
+                        <li>• Regression Models</li>
+                        <li>• Classification Algorithms</li>
+                        <li>• Advanced Models (Random Forest, SVM)</li>
+                        <li>• Model Evaluation & Deployment</li>
+                    </ul>
+                </div>
+                
+                <!-- Phase 4 -->
+                <div class="phase-card bg-gradient-to-br from-orange-600 to-red-600 p-8 rounded-3xl">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">Phase 4: Real-Time Apps</h3>
+                    <p class="text-orange-100 mb-4">Days 16-20</p>
+                    <ul class="text-sm text-orange-100 space-y-2">
+                        <li>• Streamlit Web Apps</li>
+                        <li>• ML Model Integration</li>
+                        <li>• Interactive Dashboards</li>
+                        <li>• Live Deployment</li>
+                    </ul>
+                </div>
+                
+                <!-- Phase 5 -->
+                <div class="phase-card bg-gradient-to-br from-pink-600 to-rose-600 p-8 rounded-3xl">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-2xl font-bold mb-4">Phase 5: AI Chatbots</h3>
+                    <p class="text-pink-100 mb-4">Days 21-25</p>
+                    <ul class="text-sm text-pink-100 space-y-2">
+                        <li>• API Integration</li>
+                        <li>• OpenAI/Gemini APIs</li>
+                        <li>• LangChain & RAG</li>
+                        <li>• Production Chatbots</li>
+                    </ul>
+                </div>
+                
+                <!-- Assessment Cards -->
+                <div class="phase-card bg-gradient-to-br from-yellow-600 to-yellow-800 p-8 rounded-3xl">
+                    <div class="text-4xl mb-4">🧪</div>
+                    <h3 class="text-2xl font-bold mb-4">Regular Assessments</h3>
+                    <p class="text-yellow-100 mb-4">Days 6, 15</p>
+                    <ul class="text-sm text-yellow-100 space-y-2">
+                        <li>• Theory & Practical Quizzes</li>
+                        <li>• Code Debugging Challenges</li>
+                        <li>• Real-world Problem Solving</li>
+                        <li>• Progress Tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
+                    🛠️ Build 9 Real Projects
+                </h2>
+                <p class="text-xl text-gray-300">Hands-on projects that build your portfolio and skills</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Basic Projects -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-gray-700">
+                    <h3 class="text-3xl font-bold mb-6 text-blue-400">📦 Core ML Projects</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-4 bg-gray-700 rounded-xl">
+                            <span class="text-2xl">🎓</span>
+                            <div>
+                                <h4 class="font-semibold">Student Performance Prediction</h4>
+                                <p class="text-sm text-gray-400">Predict academic outcomes using ML</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-gray-700 rounded-xl">
+                            <span class="text-2xl">🎬</span>
+                            <div>
+                                <h4 class="font-semibold">Movie Rating Predictor</h4>
+                                <p class="text-sm text-gray-400">Build recommendation systems</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-gray-700 rounded-xl">
+                            <span class="text-2xl">📈</span>
+                            <div>
+                                <h4 class="font-semibold">Sales Forecast Dashboard</h4>
+                                <p class="text-sm text-gray-400">Interactive business analytics</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-gray-700 rounded-xl">
+                            <span class="text-2xl">🍕</span>
+                            <div>
+                                <h4 class="font-semibold">Food Image Classifier</h4>
+                                <p class="text-sm text-gray-400">Computer vision with deep learning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chatbot Projects -->
+                <div class="bg-gradient-to-br from-purple-900 to-pink-900 p-8 rounded-3xl border border-purple-700">
+                    <h3 class="text-3xl font-bold mb-6 text-purple-400">💬 AI Chatbot Projects</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-4 bg-purple-800 bg-opacity-50 rounded-xl">
+                            <span class="text-2xl">⚖️</span>
+                            <div>
+                                <h4 class="font-semibold">Legal Document Q&A Bot</h4>
+                                <p class="text-sm text-purple-200">RAG-powered legal assistant</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-purple-800 bg-opacity-50 rounded-xl">
+                            <span class="text-2xl">🏥</span>
+                            <div>
+                                <h4 class="font-semibold">AI Personal Health Assistant</h4>
+                                <p class="text-sm text-purple-200">Healthcare guidance chatbot</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-purple-800 bg-opacity-50 rounded-xl">
+                            <span class="text-2xl">💼</span>
+                            <div>
+                                <h4 class="font-semibold">Career Counselor Bot</h4>
+                                <p class="text-sm text-purple-200">AI-powered career guidance</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-purple-800 bg-opacity-50 rounded-xl">
+                            <span class="text-2xl">🛒</span>
+                            <div>
+                                <h4 class="font-semibold">E-commerce Support Bot</h4>
+                                <p class="text-sm text-purple-200">Customer service automation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-purple-800 bg-opacity-50 rounded-xl">
+                            <span class="text-2xl">📚</span>
+                            <div>
+                                <h4 class="font-semibold">Educational Subject Explainer</h4>
+                                <p class="text-sm text-purple-200">AI tutor for any subject</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="mb-12">
+                <h2 class="text-5xl font-bold mb-6 text-white">
+                    🎯 Secure Your Spot Now!
+                </h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Limited seats available. Transform your career in just 25 days!
+                </p>
+            </div>
+            
+            <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-12 rounded-3xl border border-white border-opacity-20">
+                <!-- Pricing -->
+                <div class="text-center mb-12">
+                    <div class="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-2xl mb-6">
+                        <p class="text-sm font-semibold">SPECIAL LAUNCH PRICE</p>
+                        <p class="text-4xl font-black">₹799</p>
+                        <p class="text-sm line-through opacity-70">₹2,999</p>
+                    </div>
+                    <p class="text-blue-100 text-lg mb-8">🔥 Limited Time Offer - Save 73%!</p>
+                </div>
+                
+                <!-- Registration Form Link -->
+                <div class="text-center">
+                    <a href="https://forms.gle/s9eJiTD7GMr5Jy1m8" target="_blank" 
+                       class="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-16 py-6 rounded-2xl text-2xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl mb-8">
+                        🚀 REGISTER NOW FOR ₹799
+                    </a>
+                
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="mt-12 pt-8 border-t border-white border-opacity-20">
+                    <p class="text-blue-100 mb-4">
+                        <strong>Questions?</strong> Contact us:
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-8 text-blue-100">
+                        <p>📧 Your-Work@outlook.com</p>
+                        <p>📱 +91 7889714018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                    AI/ML Mastery Workshop
+                </h3>
+                <p class="text-gray-400">From Zero to AI Hero in 25 Days</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm text-gray-400">
+                <div>
+                    <h4 class="font-semibold mb-2 text-white">Program</h4>
+                    <p>25 Days</p>
+                    <p>5 Phases</p>
+                    <p>7 Projects</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2 text-white">Skills</h4>
+                    <p>Python</p>
+                    <p>Machine Learning</p>
+                    <p>AI Chatbots</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2 text-white">Tools</h4>
+                    <p>Streamlit</p>
+                    <p>LangChain</p>
+                    <p>Scikit-learn</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2 text-white">Support</h4>
+                    <p>24/7 Help</p>
+                    <p>Community</p>
+                    <p>Mentorship</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500">&copy; 2025 AI/ML Mastery Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling functions
+        function scrollToRegistration() {
+            document.getElementById('registration').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToProgram() {
+            document.getElementById('program').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Add some interactive animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all phase cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const phaseCards = document.querySelectorAll('.phase-card');
+            phaseCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+
+        // Add floating particle effect
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'fixed w-2 h-2 bg-blue-400 rounded-full opacity-30 pointer-events-none';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animation = `particle-float ${3 + Math.random() * 4}s linear forwards`;
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 7000);
+        }
+
+        // Add CSS for particle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes particle-float {
+                0% {
+                    transform: translateY(100vh) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 0.3;
+                }
+                90% {
+                    opacity: 0.3;
+                }
+                100% {
+                    transform: translateY(-100px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Create particles periodically
+        setInterval(createParticle, 2000);
+    </script>
+</body>
+</html>
